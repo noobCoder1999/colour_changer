@@ -2,25 +2,27 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () =>{
+
+  const APP_ID ="5c60cadf";
+  const APP_KEY ="5752fb69889751438ed0cce0aa1a445f";
+
+  const example_req = "https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}";
+
+
+  return(
+
+    <div className ="App">
+      <form action="" className="search-form">
+        <input type="text" className="search-bar"/>
+        <button className="search-button" type ="submit">search</button>
+      </form>
+
     </div>
+
   );
-}
+
+
+};
 
 export default App;
