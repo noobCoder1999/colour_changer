@@ -6,7 +6,7 @@ import './App.css';
 const App = () =>{
 
   const APP_ID ="418721ce";
-  const APP_KEY ="51732b93e9f3d03102e681acfd5a391b0	";
+  const APP_KEY ="1732b93e9f3d03102e681acfd5a391b0";
 
   useEffect(() =>{
     getRecipe();
@@ -14,7 +14,7 @@ const App = () =>{
 
   const getRecipe = async () =>{
 
-    const response = await fetch("https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=chicken&app_id=5c60cadfce&app_key=5752fb69889751438ed0cce0aa1a445f");
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await response.json();
     console.log(data);
   }
